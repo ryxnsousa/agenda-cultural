@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Cultural</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+</head>
+
+<body>
+    <header>
+        <div class="tittle">
+            <h1>Agenda Cultural</h1>
+        </div>
+
+        <ul>
+            <a href="./auth.html">
+                <li>Entrar/Cadastrar</li>
+            </a>
+        </ul>
+    </header>
+
+    <main>
+        <aside>
+            <h2>Descubra os próximos eventos</h2>
+            <h4>Explore uma ampla gama de eventos emocionantes 
+                acontecendo em sua área e em todo o mundo</h4>
+
+                <form>
+                    <input type="submit" value="Próximos eventos">
+                </form>
+        </aside>
+        
+
+
+        <article>
+            <img src="{% static 'images/image.png' %}" alt="placeholder">
+        </article>
+    </main>
+
+    <section>
+        <div class="events">
+            <button>Próximos eventos</button>
+            <h1>Não Perca</h1>  
+            <h4>Confira os últimos eventos acontecendo em sua área e ao redor do mundo.
+            Garanta seus ingressos antes que esgotem</h4>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <div class="image-placeholder">
+                    <span>Image Placeholder</span>
+                </div>
+                
+                <div class="event-info">
+                    <h2>OctoberFest</h2>
+                    <p>Venha viver uma noite inesquecível de pura magia e emoção no nosso show! Não perca!</p>
+                </div>
+    
+                <div class="card-footer">
+                    <span>Itapajé, CE</span>
+                    <a href="#">Saiba mais</a>
+                </div>
+            </div>
+    
+            <div class="card">
+                <div class="image-placeholder">
+                    <span>Image Placeholder</span>
+                </div>
+                
+                <div class="event-info">
+                    <h2>NovemberFest</h2>
+                    <p>Venha viver uma noite inesquecível de pura magia e emoção no nosso show! Não perca!</p>
+                </div>
+    
+                <div class="card-footer">
+                    <span>Itapajé, CE</span>
+                    <a href="#">Saiba mais</a>
+                </div>
+            </div>
+    
+            <div class="card">
+                <div class="image-placeholder">
+                    <span>Image Placeholder</span>
+                </div>
+                
+                <div class="event-info">
+                    <h2>DecemberFest</h2>
+                    <p>Venha viver uma noite inesquecível de pura magia e emoção no nosso show! Não perca!</p>
+                </div>
+    
+                <div class="card-footer">
+                    <span>Itapajé, CE</span>
+                    <a href="#">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
