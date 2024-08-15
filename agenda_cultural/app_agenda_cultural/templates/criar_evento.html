@@ -9,14 +9,13 @@
 </head>
 <body>
     <header>
-        <h1>Criar Novo Evento</h1>
+        <h1>Criar Evento</h1>
     </header>
-    
     <main>
         <form method="POST">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit">Salvar Evento</button>
+            <button type="submit">Criar Evento</button>
         </form>
     </main>
 </body>

@@ -16,8 +16,8 @@
         </div>
 
         <ul>
-            <a href="./auth.html">
-                <li>Entrar/Cadastrar</li>
+            <a href="{% url 'criar_evento' %}">
+                <li>Criar Evento</li>
             </a>
         </ul>
     </header>
@@ -28,74 +28,37 @@
             <h4>Explore uma ampla gama de eventos emocionantes 
                 acontecendo em sua área e em todo o mundo</h4>
 
-                <form>
-                    <input type="submit" value="Próximos eventos">
-                </form>
+                <a href="#eventos" class="button">Próximos eventos</a>
         </aside>
         
 
 
         <article>
-            <img src="{% static 'images/image.png' %}" alt="placeholder">
+            <img src="{% static 'images/image2.png' %}" alt="placeholder">
         </article>
     </main>
 
-    <section>
+    <section id="eventos">
         <div class="events">
             <button>Próximos eventos</button>
             <h1>Não Perca</h1>  
-            <h4>Confira os últimos eventos acontecendo em sua área e ao redor do mundo.
-            Garanta seus ingressos antes que esgotem</h4>
+            <h4>Confira os últimos eventos acontecendo em sua área e ao redor do mundo.</h4>
         </div>
 
         <div class="card-container">
+            {% for evento in eventos %}
             <div class="card">
-                <div class="image-placeholder">
-                    <span>Image Placeholder</span>
-                </div>
-                
                 <div class="event-info">
-                    <h2>OctoberFest</h2>
-                    <p>Venha viver uma noite inesquecível de pura magia e emoção no nosso show! Não perca!</p>
+                    <h2>{{ evento.nome }}</h2>
+                    <p>{{ evento.descricao }}</p>
                 </div>
-    
                 <div class="card-footer">
-                    <span>Itapajé, CE</span>
-                    <a href="#">Saiba mais</a>
+                    <span>{{ evento.local }}</span>
+                    <a href="{% url 'editar_evento' evento.id %}">Editar Evento</a>
+
                 </div>
             </div>
-    
-            <div class="card">
-                <div class="image-placeholder">
-                    <span>Image Placeholder</span>
-                </div>
-                
-                <div class="event-info">
-                    <h2>NovemberFest</h2>
-                    <p>Venha viver uma noite inesquecível de pura magia e emoção no nosso show! Não perca!</p>
-                </div>
-    
-                <div class="card-footer">
-                    <span>Itapajé, CE</span>
-                    <a href="#">Saiba mais</a>
-                </div>
-            </div>
-    
-            <div class="card">
-                <div class="image-placeholder">
-                    <span>Image Placeholder</span>
-                </div>
-                
-                <div class="event-info">
-                    <h2>DecemberFest</h2>
-                    <p>Venha viver uma noite inesquecível de pura magia e emoção no nosso show! Não perca!</p>
-                </div>
-    
-                <div class="card-footer">
-                    <span>Itapajé, CE</span>
-                    <a href="#">Saiba mais</a>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </section>
 

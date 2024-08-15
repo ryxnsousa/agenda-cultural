@@ -67,7 +67,7 @@ article img {
     padding: 50px;
 }
 
-form [type="submit"] {
+a.button {
     height: 40px;
     width: 130px;
     background-color: #2563EB;

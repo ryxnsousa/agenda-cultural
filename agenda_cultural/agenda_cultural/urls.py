@@ -17,8 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from app_agenda_cultural import views
+from app_agenda_cultural.views import criar_evento, editar_evento, excluir_evento
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', views.home),
+    path('home/', views.home, name='home'),
+    path('criar-evento/', views.criar_evento, name='criar_evento'),
+    path('editar-evento/<int:id>/', views.editar_evento, name='editar_evento'),
+    path('excluir-evento/<int:id>/', excluir_evento, name='excluir_evento'),
 ]

@@ -4,4 +4,6 @@ from .models import Evento
 class EventoForm(forms.ModelForm):
     class Meta:
         model = Evento
-        fields = ['nome', 'descricao', 'local', 'data']
+        fields = ['nome', 'descricao', 'local','data']
+        widgets = {
+            'data': forms.DateInput(attrs={'type': 'date'})}
